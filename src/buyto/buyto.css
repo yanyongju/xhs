@@ -1,0 +1,86 @@
+.buyto{
+    width: 100%;
+    background-color: #fff;
+}
+.buyto img{
+    width: 100%;
+}
+.buyto .title{
+    margin-top: 10px;
+    padding: 0 10px;
+    color: #333
+}
+.buyto .from{
+    color: #999;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 0 10px 5px;
+}
+.buyto .from .from_title{
+    border-bottom: 1px solid #e6e6e6;
+}
+.buyto .from .from_title span{
+    color: #5b92e1;
+}
+.price{
+    color: #ff2742;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.pay{
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    border-top: 1px solid #e1e1e1;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+}
+.pay .pay_car{
+    width: 120px;
+    height: 45px;
+}
+.pay .pay_car ul{
+    width: 100%;
+    display: flex;
+}
+.pay .pay_car ul li{
+    list-style: none;
+    margin: 0 10px;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #9b9b9b;
+}
+.pay .pay_car img{
+    width: 18px;
+    height: 18px;
+}
+.pay .pay_join{
+    width: 35%;
+    height: 100%;
+}
+.pay .pay_join button{
+    width: 100%;
+    height: 100%;
+    background-color: #ff7e8d;
+    color: #fff;
+    font-weight: bold;
+    border: 0;
+    outline: 0;
+}
+.pay .pay_buy{
+    width: 35%;
+    height: 100%;
+}
+.pay .pay_buy a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: #ff2741;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 45px;
+    font-size: 14px;
+}

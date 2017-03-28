@@ -240,7 +240,7 @@ define([
     }
 
     function getTemplate(data){
-            var str = '<div class="box">\
+            var str = '<a id="'+data.id+'" hred="#/goumai" class="box">\
                 <img class="lazy" data-original="'+data.image+'"/>\
                 <p class="h">'+data.title+'</p>\
                 <div class="desc">'+data.desc+'</div>\
@@ -254,7 +254,7 @@ define([
                         '+data.likes+'\
                     </div>\
                 </div>\
-            </div>'
+            </a>'
             return str;
         } 
 

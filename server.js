@@ -371,6 +371,17 @@ app.get('/getaili',function(req,res){
     })
 })
 
+app.get('/getbuy',function(req,res){
+    fs.readFile(__dirname + '/public/购买/buy.json',function(err,data){
+        if(err){
+            console.log(err)
+        }else{
+            var json = JSON.parse(data);
+            res.json(json);
+        }
+    })
+})
+
 app.listen(3000,function(){
     console.log('服务器已启动：http://localhost:3000')
 })

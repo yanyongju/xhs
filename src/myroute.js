@@ -319,6 +319,16 @@ define([
          $('.act').css('color','#333');
         $('[href="#/mine"]').css('color','#ff2741');
         console.log('个人中心')
-        $('#container').html('<h1>个人中心</h1>')
+        
+        require(['src/buy/buy.js'],function(buy){
+            buy.add();
+            buy.getdata();
+        })
+    })
+
+    .route('#/goumai',function(req,next){
+        require(['src/buyto/buyto.js'],function(buyto){
+            buyto.add();
+        })
     })
 })
