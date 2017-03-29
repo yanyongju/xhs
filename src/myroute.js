@@ -326,9 +326,11 @@ define([
         })
     })
 
-    .route('#/goumai',function(req,next){
+    .route('#/goumai/:id',function(req,next){
+        var id = req.params.id;
         require(['src/buyto/buyto.js'],function(buyto){
             buyto.add();
+            buyto.getdata(id);
         })
     })
 })

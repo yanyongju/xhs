@@ -11,10 +11,12 @@ define([
     function getdata (){
         $.get('http://localhost:3000/getbuy',function(res){
             var lives = res.data;
+            localStorage.goods = JSON.stringify(res.data);
             var home_left = [];
             var home_right = [];
             for(var i = 0;i < lives.length;i++){
-                var box = '<a id="'+lives[i].id+'" href="#/goumai" class="box">\
+                var box = '<a data-id="'+lives[i].id+'" href="#/goumai/'+lives[i].id+'" class="box">\
+                            <input class="uid" type="hidden" value="'+lives[i].id+'"/>\
                             <img class="lazy" data-original="'+lives[i].image+'"/>\
                             <p class="h">'+lives[i].title+'</p>\
                             <div class="desc">'+lives[i].desc+'</div>\
