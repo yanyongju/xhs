@@ -329,8 +329,15 @@ define([
     .route('#/goumai/:id',function(req,next){
         var id = req.params.id;
         require(['src/buyto/buyto.js'],function(buyto){
-            buyto.add();
+            buyto.add(id);
             buyto.getdata(id);
+        })
+    })
+
+    .route('#/gouwuche',function(req,next){
+        require(['src/buycart/buycart.js'],function(buycart){
+            buycart.add();
+            // buycart.getdata();
         })
     })
 })

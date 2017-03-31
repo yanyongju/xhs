@@ -382,6 +382,35 @@ app.get('/getbuy',function(req,res){
     })
 })
 
+app.get('/getbuyto',function(req,res){
+    fs.readFile(__dirname + '/public/购买/buyto.json',function(err,data){
+        if(err){
+            console.log(err)
+        }else{
+            var carts = JSON.parse(data.toString).carts;
+            fs.readFile(__dirname + 'public/购买/buy.json',function(err,adata){
+                if(err){
+                    console.log(err);
+                }else{
+                    var adata = JSON.parse(adata.toString).data;
+                    var resarr = [];
+                    for(var i in carts){
+                        for(var j = 0;j < adata.length;j++){
+                            var ad = adata[j];
+                            if(i == ad.id){
+                                ad.number = data[i];
+                                resarr.push(ad);
+                            }
+                        }
+                    }
+
+                    res.json({data:resarr});
+                }
+            })
+        }
+    })
+})
+
 app.listen(3000,function(){
     console.log('服务器已启动：http://localhost:3000')
 })
